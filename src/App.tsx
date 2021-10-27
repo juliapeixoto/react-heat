@@ -1,9 +1,12 @@
 import styles from "./App.module.scss";
+import { LoginBox } from "./components/LoginBox/LoginBox";
+import { MessageList } from "./components/MessageList/MessageList";
 
 export function App() {
   return (
     <main className={styles.content__wrapper}>
-      <h1>Hello</h1>
+      <MessageList />
+      <LoginBox />
     </main>
   );
 }
