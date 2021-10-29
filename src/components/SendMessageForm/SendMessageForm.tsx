@@ -16,6 +16,8 @@ export function SendMessageForm() {
     }
 
     await api.post("messages", { message });
+
+    setMessage("");
   }
 
   return (
@@ -45,6 +47,7 @@ export function SendMessageForm() {
         <textarea
           name="message"
           id="message"
+          maxLength={300}
           placeholder="Qual sua expectativa para o evento?"
           onChange={(event) => setMessage(event.target.value)}
           value={message}
